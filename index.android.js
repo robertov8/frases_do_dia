@@ -19,7 +19,11 @@ const styles = {
     estiloTexto: {
         fontSize: 30,
         backgroundColor: '#08509B',
-        height: 80
+        paddingTop: 15,
+        color: '#fff',
+        fontStyle: 'italic',
+        fontWeight: 'bold',
+        textAlign: 'center'
     }
 };
 

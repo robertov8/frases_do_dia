@@ -5,12 +5,14 @@
  */
 
 import React, { Component } from 'react';
-import { AppRegistry, Text } from 'react-native';
+import { AppRegistry, View, Text } from 'react-native';
 
 export default class frases_do_dia extends Component {
   render() {
     return (
-        <Text style={styles.estiloTexto}>Frases do dia</Text>
+        <View style={styles.estiloView}>
+            <Text style={styles.estiloTexto}>Frases do dia</Text>
+        </View>
     );
   }
 }
@@ -19,11 +21,12 @@ const styles = {
     estiloTexto: {
         fontSize: 30,
         backgroundColor: '#08509B',
-        paddingTop: 15,
-        color: '#fff',
-        fontStyle: 'italic',
-        fontWeight: 'bold',
-        textAlign: 'center'
+    },
+    estiloView: {
+        backgroundColor: 'skyblue',
+        height: 300,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 };
 

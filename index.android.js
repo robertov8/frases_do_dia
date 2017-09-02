@@ -17,7 +17,9 @@ export default class frases_do_dia extends Component {
 
 const styles = {
     estiloTexto: {
-        fontSize: 50
+        fontSize: 30,
+        backgroundColor: '#08509B',
+        height: 80
     }
 };
 

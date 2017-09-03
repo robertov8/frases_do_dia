@@ -5,20 +5,27 @@
  */
 
 import React, { Component } from 'react';
-import { AppRegistry, View, StyleSheet, Text, Image } from 'react-native';
+import {
+    AppRegistry,
+    View,
+    StyleSheet,
+    Text,
+    Image,
+    TouchableOpacity
+} from 'react-native';
 
 export default class frases_do_dia extends Component {
 
     botaoPressionado() {
-        alert('Botao pressionado!');
     }
 
     render() {
         return (
             <View style={styles.principal}>
-                <Image style={styles.imagem} source={ require('./imgs/uvas.png')}>
-                    <Text style={styles.texto}>Legenda para a foto</Text>
-                </Image>
+                <Image source={ require('./imgs/logo.png')}/>
+                <TouchableOpacity style={styles.botao}>
+                    <Text style={styles.textoBotao}>Nova frase</Text>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -26,15 +33,20 @@ export default class frases_do_dia extends Component {
 
 const styles = StyleSheet.create({
     principal: {
-        paddingTop: 40
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
-    imagem: {
-        justifyContent: 'flex-end',
-        padding: 5
+    botao: {
+        backgroundColor: '#538530',
+        paddingVertical: 10,
+        paddingHorizontal: 40,
+        marginTop: 20
     },
-    texto: {
-        backgroundColor: 'white',
-        textAlign: 'center'
+    textoBotao: {
+        color: 'white',
+        fontSize: 16,
+        fontWeight: 'bold'
     }
 });
 
